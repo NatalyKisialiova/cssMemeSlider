@@ -200,6 +200,7 @@ p {
     }
     .container-controlers {
         flex-direction: column;
+        width: 95%;
     }
     .controllers {
         order: 1;
@@ -211,7 +212,7 @@ p {
         order: 2;
     }
     .container-imageSlader {
-        width: 90%;
+        width: 95%;
         height: 50%;
     }
 }
