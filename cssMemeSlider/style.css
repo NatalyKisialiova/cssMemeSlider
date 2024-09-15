@@ -5,9 +5,11 @@
     font-family: Arial, sans-serif;
     background-color: rgb(29, 29, 31);
 }
+
 body {
     height: 100vh;
 }
+
 .wrapper {
     width: 90vw;
     height: 93vh;
@@ -18,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .container-imageSlader {
     width: 70%;
     height: 80%;
@@ -52,29 +55,34 @@ body {
         margin-top: 0;
     }
 }
+
 .container-imageSlader img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .container-controlers {
-    width: 70%;
+    width: 50%;
     /* height: 15%; */
     display: flex;
     justify-content: space-between;
 }
+
 .controllers {
     display: flex;
 }
+
 .controllers a span {    
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     background-color: rgb(15, 70, 107);
     border-radius: 50%;
     transition: .5s ease-in-out;
     /* margin: 0.3em; */    
 }
+
 .link {
     text-decoration: none;
     user-select: none;
@@ -82,17 +90,40 @@ body {
     cursor: pointer;
     padding: 0.5em;
 }
+
 p {
-    font-size: 2em;
+    font-size: 1em;
     color: rgb(234, 236, 237);
+    display: none;    
+    transition: 2s ease-in-out;
+    animation-name: text_meme;
+    animation-duration: 2s;
+    user-select: none;
+    outline: none;
+}
+
+@keyframes text_meme {
+    from {
+        opacity: 0;
+        margin-left: -3em;
+    }
+    to {    
+        opacity: 1;
+        margin-left:0;
+    }
+}
+.textMeme_1 {
+    display: inline-block;
 }
 .link:hover span{
     background-color: rgb(234, 236, 237);
 }
+
 .container-imageSlader > .container-img_1 {
     display: block;
     opacity: 1;
 }
+
 #imag_1:target ~ .container-imageSlader .container-img_1,
 #imag_2:target ~ .container-imageSlader .container-img_2,
 #imag_3:target ~ .container-imageSlader .container-img_3,
@@ -107,9 +138,22 @@ p {
     display: none;
     opacity: 0;
 }
+#imag_1:target ~ .container-controlers .textSlader .textMeme_1,
+#imag_2:target ~ .container-controlers .textSlader .textMeme_2,
+#imag_3:target ~ .container-controlers .textSlader .textMeme_3,
+#imag_4:target ~  .container-controlers .textSlader .textMeme_4{
+    display: inline-block;
+}
+
+#imag_2:target ~ .container-controlers .textSlader .textMeme_1,
+#imag_3:target ~ .container-controlers .textSlader .textMeme_1,
+#imag_4:target ~ .container-controlers .textSlader .textMeme_1{
+    display: none;
+}
+
 .link[href="#imag_1"] span {
     background-color: #2f2d30;
-    border: 3px solid rgb(110, 180, 213);
+    border: 3px solid rgb(15, 70, 107);
 }
 
 #imag_1:target ~ .container-controlers .controllers .link[href="#imag_1"] span,    
@@ -117,17 +161,25 @@ p {
 #imag_3:target ~ .container-controlers .controllers .link[href="#imag_3"] span, 
 #imag_4:target ~ .container-controlers .controllers .link[href="#imag_4"] span{
     background-color: #2f2d30;
-    border: 3px solid rgb(110, 180, 213);
+    border: 3px solid rgb(15, 70, 107);
 }
+
 #imag_2:target ~ .container-controlers .controllers .link[href="#imag_1"] span, 
 #imag_3:target ~ .container-controlers .controllers .link[href="#imag_1"] span, 
 #imag_4:target ~ .container-controlers .controllers .link[href="#imag_1"] span {
     border: none;
     background-color: rgb(15, 70, 107);
 }
+
 #imag_1:target ~ .container-controlers .controllers .link[href="#imag_1"]:hover span,    
 #imag_2:target ~ .container-controlers .controllers .link[href="#imag_2"]:hover span, 
 #imag_3:target ~ .container-controlers .controllers .link[href="#imag_3"]:hover span, 
 #imag_4:target ~ .container-controlers .controllers .link[href="#imag_4"]:hover span {
     border: 3px solid rgb(234, 236, 237);
+}
+
+#imag_2:target ~ .container-controlers .controllers .link[href="#imag_1"]:hover span, 
+#imag_3:target ~ .container-controlers .controllers .link[href="#imag_1"]:hover span, 
+#imag_4:target ~ .container-controlers .controllers .link[href="#imag_1"]:hover span {
+    background-color: rgb(234, 236, 237);
 }
