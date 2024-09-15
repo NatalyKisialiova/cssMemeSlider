@@ -195,6 +195,9 @@ p {
 
 @media screen and (max-width: 48rem) {
     /* 768px */
+    .wrapper {
+        height: auto;
+    }
     p {
         font-size: 0.9em;
     }
