@@ -37,7 +37,7 @@ body {
     display: none;
     opacity: 0;
     animation-name: slider;
-    animation-duration: 2s;
+    animation-duration: 3s;
     transition:3s;
     user-select: none;
     outline: none;
@@ -98,7 +98,7 @@ p {
     display: none;    
     transition: 2s ease-in-out;
     animation-name: text_meme;
-    animation-duration: 2s;
+    animation-duration: 3s;
     user-select: none;
     outline: none;
 }
@@ -211,6 +211,7 @@ p {
         order: 2;
     }
     .container-imageSlader {
-        height: auto;
+        width: 90%;
+        height: 50%;
     }
 }
